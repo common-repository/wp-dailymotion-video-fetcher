@@ -1,0 +1,102 @@
+body {
+    margin:0px;
+    padding:0px;
+    position:relative;
+    overflow-x:hidden;
+    width: 100%;
+    float:lef;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol { margin:0px; padding:0px; }
+.flip-card {
+    float:left;
+    margin-bottom: 15px;
+    width:100%;
+    position:relative;
+}
+.card-img,
+.card-img > img {
+    float:left;
+    width:100%;
+    position:relative;
+}
+.card-img a {
+    display:block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    text-align:center;
+    height:40px;
+    width:40px;
+    background:#fff;
+    z-index:10;
+    opacity: 0;
+    line-height: 40px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.card-img:before {
+    content:'';
+    left:0;
+    top: 0;
+    background:rgba(0,0,0,0.8);
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index:2;
+    opacity: 0;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+.card-img:hover a {
+    opacity: 1;
+}
+.card-img:hover:before {
+    opacity: 1;
+}
+.card-img a img {
+    float:none;
+    display:inline-block;
+    margin:0px auto 0px 2px;
+}
+.flip-card .strip {
+    background: rgba(0,0,0,0.9);
+    float: left;
+    left: 0;
+    padding: 10px 0;
+    position: relative;
+    top: 100%;
+    width: 100%;
+    z-index:4;
+}
+.strip h2 {
+    float:left;
+    width:100%;
+    padding: 0px 15px;
+    font: 600 14px "Open Sans";
+    letter-spacing:1px;
+    color:#fff;
+    text-transform:uppercase;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
